@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Titillium Web", sans-serif;
+            color: #4A202A;
+            background-image: url("background.png");
+            background-size: cover;
+            background-position:center;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            background-color: #76172C;
+            overflow: hidden;
+            height: 60px;
+            box-shadow: 0 2px 5px rgba(238, 170, 195, 0.5);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-link img {
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: white;
+            text-align: center;
+            padding: 17px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        .nav-links a:hover {
+            background-color: #D86487;
+            transition-duration: 0.5s;
+        }
+
+        .Sign_in {
+            float: right;
+            background-color: #D86487;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .Sign_in:hover {
+            background-color: #EEAAC3;
+        }
+
+        #content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #76172C;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #4A202A;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgb(216, 100, 135, 0.8), rgb(238, 170, 195, 0.8));
+            border: 2px solid #D86487;
+            border-radius: 14px;
+            padding: 60px 40px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 0 40px rgba(118, 23, 44, .2);
+        }
+
+        .cta-button {
+            background-color: #76172C;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 20px rgba(118, 23, 44, .4);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #D86487;
+            transform: scale(1.05);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            border: 3px solid #EEAAC3;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(74, 32, 42, 0.1);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: #D86487;
+            box-shadow: 0 4px 20px rgba(216, 100, 135, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #76172C;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #4A202A;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background-color: #4A202A;
+            color: #F1DFDD;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 350px;
+            border-top: 4px solid #D86487;
+        }
+
+        footer p {
+            color: #F1DFDD;
+            margin: 0;
+        }
+
+        #card 
+        {
+            width: auto;
+            background: #EEAAC3;
+            border: 2px solid rgba(74, 32, 42, .3);
+            border-radius: 14px;
+            padding: 40px 44px;
+            box-shadow: 0 0 40px rgba(118, 23, 44, .2);
+            position: relative;
+            margin: 50px 50px;
+        }
+        #Profile_Container 
+        {
+            position:relative;
+            width: 120px;
+            height: 120px;
+            margin: auto;;
+        }
+        #Profile_Container img 
+        {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(74, 32, 42, .5);
+            box-shadow: 0 0 0 4px rgba(216, 100, 135, .25);
+            cursor: pointer;
+        }
+        #Profile_Container input
+        {
+            display:none;
+        }
+        .form 
+        {
+            margin-bottom: 18px;
+        }
+        label 
+        {
+            display: block;
+            font-size: .78rem;
+            color: rgba(74, 32, 42, .9);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+            margin-bottom: 7px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"]
+        {
+            width: 100%;
+            background: rgba(238, 170, 195, .3);
+            border: 1px solid rgba(216, 100, 135, .5);
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #4A202A;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: .92rem;
+            outline: none;
+            margin: 5px;
+        }
+        .map {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo-link"><img src="logo.png" alt="Logo"></a>
+        <div class="nav-links">
+            <a class="Home" href="index.html">Home</a>
+            <a class="about" href="Pu_registration.html">Ride</a>
+            <a class="contact" href="blank.html">Contact</a>
+            <a class="services" href="blank.html">Services</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <h1 style="color: white; text-align: center; margin-top: 50px;font-weight: 200;">VELORA</h1>
+    </div>
+
+    <div id="card">
+        <div class="map">
+            <img src="train_line.jpg" alt="Train Line" style="height: 500px; width: 500px; margin-bottom: 20px ; border-radius: 10px; border: 2px solid rgba(216, 100, 135, .5); box-shadow: 0 0 0 4px rgba(238, 170, 195, .25);">
+        </div>
+
+        <div class="pickup_location">
+            <h2 style="color: #76172C; margin-bottom: 20px;">Pick-up Location</h2>
+            <select id="pickupSelect" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid rgba(216, 100, 135, .5); background: rgba(238, 170, 195, .3); color: #4A202A; font-family: 'Titillium Web', sans-serif; font-size: .92rem; outline: none;">
+                <option value="">Select your pick-up location (LRT LINE 1)</option>
+
+                <option value="Roosevelt">Roosevelt (0 km)</option>
+                <option value="Balintawak">Balintawak (2 km)</option>
+                <option value="Monumento">Monumento (4 km)</option>
+                <option value="5th Avenue">5th Avenue (6 km)</option>
+                <option value="R. Papa">R. Papa (8 km)</option>
+                <option value="Abad Santos">Abad Santos (10 km)</option>
+                <option value="Blumentritt">Blumentritt (12 km)</option>
+                <option value="Tayuman">Tayuman (14 km)</option>
+                <option value="Bambang">Bambang (16 km)</option>
+                <option value="Doroteo Jose">Doroteo Jose (18 km)</option>
+                <option value="Carriedo">Carriedo (20 km)</option>
+                <option value="Central Terminal">Central Terminal (22 km)</option>
+
+            </select>
+        </div>
+        <div class="dropoff_location" style="margin-top: 20px;">
+            <h2 style="color: #76172C; margin-bottom: 20px;">Drop-off Location</h2>
+            <select id="dropoffSelect" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid rgba(216, 100, 135, .5); background: rgba(238, 170, 195, .3); color: #4A202A; font-family: 'Titillium Web', sans-serif; font-size: .92rem; outline: none;">
+                <option value="">Select your Drop-off location (LRT LINE 1)</option>
+
+                <option value="Roosevelt">Roosevelt (0 km)</option>
+                <option value="Balintawak">Balintawak (2 km)</option>
+                <option value="Monumento">Monumento (4 km)</option>
+                <option value="5th Avenue">5th Avenue (6 km)</option>
+                <option value="R. Papa">R. Papa (8 km)</option>
+                <option value="Abad Santos">Abad Santos (10 km)</option>
+                <option value="Blumentritt">Blumentritt (12 km)</option>
+                <option value="Tayuman">Tayuman (14 km)</option>
+                <option value="Bambang">Bambang (16 km)</option>
+                <option value="Doroteo Jose">Doroteo Jose (18 km)</option>
+                <option value="Carriedo">Carriedo (20 km)</option>
+                <option value="Central Terminal">Central Terminal (22 km)</option>
+                
+            </select>
+        </div>
+
+        <div class="distance" style="margin-top: 20px; display: none;">
+            <h2 style="color: #76172C; margin-bottom: 20px;">Distance (KM)</h2>
+            <input type="number" id="pickupDistance" readonly style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid rgba(216, 100, 135, .5); background: rgba(238, 170, 195, .3); color: #4A202A; font-family: 'Titillium Web', sans-serif; font-size: .92rem; outline: none;">
+        </div>
+
+        <div class="age" style="margin-top: 20px;">
+            <h2 style="color: #76172C; margin-bottom: 20px;">Age</h2>
+            <input type="number" id="userAge" placeholder="Enter your age" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid rgba(216, 100, 135, .5); background: rgba(238, 170, 195, .3); color: #4A202A; font-family: 'Titillium Web', sans-serif; font-size: .92rem; outline: none;">
+        </div>
+
+        <button class="cta-button" onclick="calculateAndDisplayFare()" style="margin-top: 20px;">Calculate Fare</button>
+
+        <div id="fareDisplay" style="margin-top: 20px; font-size: 1.2rem; color: #76172C;"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Canlas, Rabacca, Genove. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

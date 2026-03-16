@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Titillium Web", sans-serif;
+            color: #4A202A;
+            background-image: url("background.png");
+            background-size: cover;
+            background-position:center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        nav {
+            background-color: #76172C;
+            overflow: hidden;
+            height: 60px;
+            box-shadow: 0 2px 5px rgba(238, 170, 195, 0.5);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-link img {
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: white;
+            text-align: center;
+            padding: 17px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        .nav-links a:hover {
+            background-color: #D86487;
+            transition-duration: 0.5s;
+        }
+
+        .Sign_in {
+            background-color: #D86487;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .Sign_in:hover {
+            background-color: #EEAAC3;
+        }
+
+        .error-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 0 40px rgba(118, 23, 44, .2);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .error-box h2 {
+            color: #76172C;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #4A202A;
+            color: #F1DFDD;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 4px solid #D86487;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        footer p {
+            color: #F1DFDD;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo-link"><img src="logo.png" alt="Logo"></a>
+        <div class="nav-links">
+            <a class="Home" href="index.html">Home</a>
+            <a class="about" href="Pu_registration.html">Ride</a>
+            <a class="contact" href="blank.html">Contact</a>
+            <a class="services" href="blank.html">Services</a>
+        </div>
+    </nav>
+
+    <div class="error-box">
+        <h2>Uh Oh! Cannot retrive website, Please check your internet and try again.</h2>
+        <h2>ERROR CODE: x000481269yXu</h2>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Canlas, Rabacca, Genove. All rights reserved.</p>
+    </footer>
+</body>
+</html>
